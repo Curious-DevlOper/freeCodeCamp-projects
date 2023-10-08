@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>technical documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="documentationpage.css">
+  </head>
+  <body>
+    <nav id="navbar">
+        <header>Angular Documentation</header>
+        <ul>
+           <li><a class="nav-link" href="#introduction">Introduction</a></li> 
+           <li><a class="nav-link" href="#What-you-should-already-know">What you should already know</a></li>
+           <li><a class="nav-link" href="#getting-started">Getting Started</a></li> 
+           <li><a class="nav-link" href="#Angular-Architecture">Angular Architecture</a></li> 
+           <li><a class="nav-link" href="#Angular-CLI">Angular CLI</a></li> 
+           <li><a class="nav-link" href="#Directives">Directives</a></li> 
+           <li><a class="nav-link" href="#Dependency-Injection">Dependency Injection</a></li> 
+           <li><a class="nav-link" href="#Routing">Routing</a></li>
+           <li><a class="nav-link" href="#Forms">Forms</a></li> 
+           <li><a class="nav-link" href="#HTTP-Client">HTTP Client</a></li> 
+           <li><a class="nav-link" href="#Observables">Observables</a></li> 
+           <li><a class="nav-link" href="#Observables">Resources and Further Reading</a></li> 
+
+
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Angular is a development platform, built on <a href="https://www.typescriptlang.org">TypeScript</a>. As a platform, Angular includes:</p>
+      
+                <ul>
+                  <li>
+                    A component-based framework for building scalable web applications.
+                  </li>
+                  <li>A collection of well-integrated libraries that cover a wide variety of features,
+                     including routing, forms management, client-server communication, and more</li>
+                  <li>
+                    A suite of developer tools to help you develop, build, test, and update your code
+                  </li>
+                </ul>
+                <p>
+                With Angular, you're taking advantage of a platform that can scale from single-developer projects to enterprise-level applications.
+                Angular is designed to make updating as straightforward as possible, so take advantage of the latest developments with minimal effort. 
+                Best of all, the Angular ecosystem consists of a diverse group of over 1.7 million developers, library authors, and content creators.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="What-you-should-already-know">
+            <header>What-you-should-already-know</header>
+            <article>
+                <p>
+                    This guide assumes you have the following basic background:
+                </p>
+      
+                <ul>
+                  <li>
+                    HTML and CSS: Angular is primarily used for building web applications, so having a good grasp 
+                    of HTML for structuring content and CSS for styling is essential.
+                  </li>
+                  <li>
+                    JavaScript/TypeScript: Angular is written in TypeScript, which is a superset of JavaScript. 
+                    You should have a good understanding of JavaScript/TypeScript, 
+                    including variables, data types, functions, and basic object-oriented programming concepts.
+                  </li>
+                  <li>
+                    HTTP and APIs: Understanding how HTTP works and how to make API requests using methods like 
+                    GET, POST, PUT, and DELETE is crucial, as Angular often interacts with web services.
+                  </li>
+                  <li>Asynchronous Programming: Knowledge of asynchronous programming concepts, such as callbacks, 
+                    Promises, and async/await, is important for dealing with asynchronous operations in Angular, 
+                    especially when making API calls.</li>
+                </ul>
+              </article>
+        </section>
+
+        <section class="main-section" id="getting-started">
+            <header> Getting Started</header>
+            <article>
+                <p>
+                Before you can start working with Angular, you need to install Node.js and npm (Node Package Manager) 
+                on your machine. Then, you can install Angular CLI globally using npm:
+                </p>
+                <code>
+                    npm install -g @angular/cli
+                </code>
+                <p>To create a new Angular project, use the Angular CLI:</p>
+                <code>ng new my-angular-app</code>
+                <code>cd my-angular-app</code>
+                <p>This command will generate a new Angular project with the default configuration.</p>
+
+            </article>
+
+        </section>
+        <section class="main-section" id="Angula-Architecture">
+            <header>Angular Architecture</header>
+            <article>
+                <p>Angular applications are built using a component-based architecture. Here are some essential concepts:</p>
+                <ul>
+                    <li>
+                    Modules: Angular applications are organized into modules. Modules are used to group related components, 
+                    services, and other code into functional units. To create a new module, use the Angular CLI:
+                    </li>
+                
+                    <code>ng generate module my-module</code>
+                    <li>
+                        Components: Components are the building blocks of Angular applications. They encapsulate the user interface
+                        and logic of a part of the application. Use the following command to generate a new component:
+                    </li>
+                    <code>ng generate component my-component</code>
+                    <li>
+                        Services: Services are used to encapsulate and share code that is independent of any specific component.
+                        They are often used for data retrieval, manipulation, and communication between components. Generate a service using:
+                    </li>
+                    <code>ng generate service my-service
+                    </code>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Angular-CLI">
+            <header>Angular CLI</header>
+            <article>
+                <p>Angular CLI is a command-line tool that helps you manage your Angular applications. Here are some common CLI commands:</p>
+                <p>Common CLI Commands</p>
+                <ul>
+                    <li><code>`ng generate`: </code>Used to generate components, modules, services, and more.</li>
+                    <li><code>`ng serve`: </code>Starts a development server and serves your Angular application locally.</li>
+                    <li><code>`ng build`: </code>Builds the application for production.</li>
+                    <li><code>`ng test`: </code>Runs unit tests.</li>
+                    <li><code>`ng e2e`: </code> Runs end-to-end tests.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Directives">
+            <header>Directives</header>
+            <article>
+                <p>
+                    Directives are special instructions in the DOM. Angular provides several built-in directives like
+                    <code>*ngFor, </code>
+                    <code>*ngIf, </code>and
+                    <code>*ngSwitch </code> to manipulate the DOM and control the rendering of components.
+
+                    </p>
+            </article>
+        </section>
+        <section class="main-section" id="Dependency-Injection">
+            <header>Dependency Injection</header>
+            <article>
+                <p>
+                    Angular's dependency injection system allows you to provide and use services across different parts 
+                    of your application. It promotes code reusability and maintainability.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Routing">
+            <header> Routing</header>
+            <article>
+                <p> Angular provides a powerful routing system that allows you to navigate between different views and components in 
+                    a single-page application. You can configure routes and route parameters to build complex navigation structures.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Routing">
+            <header> Forms</header>
+            <article>
+                <p> Angular offers robust support for creating forms, including template-driven forms and reactive forms.
+                     You can easily manage form validation, submission, and data binding.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Routing">
+            <header> HTTP Client</header>
+            <article>
+                <p> Angular's HttpClient module simplifies making HTTP requests to APIs. You can perform GET, POST, PUT, DELETE, and other HTTP operations with ease.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Routing">
+            <header> Observables</header>
+            <article>
+                <p> Observables are a key part of Angular's asynchronous programming model. 
+                    They are used for handling events, managing asynchronous data, and working with RxJS libraries.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Routing">
+            <header> Resources and Further Reading</header>
+            <article>
+                <ul>
+                    <li>Angular Official Documentation: <a href="https://angular.io/">https://angular.io/</a> </li> 
+                    <li>Angular Style Guide: <a href=" https://angular.io/guide/styleguide">https://angular.io/guide/styleguide</a> </li>
+                    <li>Angular Blog: <a href=" https://blog.angular.io/">https://blog.angular.io/</a></li>
+                    <li>RxJS Official Documentation: <a href="https://rxjs.dev/">https://rxjs.dev/</a> </li> 
+                </ul>
+                <p>This technical documentation provides a high-level overview of Angular.
+                To dive deeper into each topic, consult the official documentation and
+                 explore additional resources available online. Happy coding with Angular!</p>
+
+
+
+
+                </p>
+            </article>
+        </section>
+    </main>
+  </body>
+</html>
